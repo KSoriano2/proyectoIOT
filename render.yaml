@@ -1,13 +1,10 @@
 services:
   - type: web
-    name: facial-recognition-esp32-flask
+    name: reconocimiento-facial
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    region: oregon
     plan: free
-    healthCheckPath: /health
-    envVars:
-      - key: PORT
-        value: 10000
-      - key: FLASK_ENV
-        value: production
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python reconocimiento.py
+    pythonVersion: 3.10
