@@ -1,6 +1,4 @@
 flask
-flask-cors
-face_recognition
+numpy
 opencv-python-headless
-cmake
-dlib
+face_recognition
